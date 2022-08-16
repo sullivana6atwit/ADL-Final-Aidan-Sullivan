@@ -28,10 +28,15 @@ The loss of the network is composed of two parts. A Kullback–Leibler Divergenc
 
 ## Results
 
+![kl_loss](./klloss.png) ![recon_loss](./recon_loss.png)
 
 Both loss metrics converged after eight epochs. The reconstruction loss remained in the thousands. This is due to the binarized data and the output of the convolutional transposes. The input data is completely binarized while the output of the decoder is float values. The float values for pitch range of 1e-9 to 0.5 meaning there is a threshold where the decoded values should be set to 0 or 1 to match the binarzed input data. This means the Model could be used to generate new midi files
 
+![decoder_dim](./decoder_dim.png)
+
 To evaluate the accuracy of the model I ran the test data through the encoder and calculated the euclidean distance between every sample, recording the index of the minimum distance for each of the test song. If the encoder is consistent and accurate the shortest latent space distance value should be the distance from the song to itself. Using this metric the encoder achieved an accuracy of 0.64. 
+
+![accuracy](./accuracy.PNG)
 
 ## Discussion
 
