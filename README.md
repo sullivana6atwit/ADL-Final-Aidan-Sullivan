@@ -38,7 +38,9 @@ The VAE model trained 100000 midi samples over 30 epochs, taking about 13 hours 
 
 Citations 
 
-Book
+Deep Learning with Python, Second Edition
+
+Lakh Pianoroll Dataset: https://salu133445.github.io/lakh-pianoroll-dataset/
 
 Used dataset and some data prep tools from Musegan:
 
